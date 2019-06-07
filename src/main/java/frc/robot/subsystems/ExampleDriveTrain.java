@@ -7,12 +7,16 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
  * An example subsystem.  You can replace me with your own Subsystem.
  */
-public class ExampleSubsystem extends Subsystem {
+public class ExampleDriveTrain extends Subsystem {
+  public static WPI_TalonSRX exampleLeftTalon;
+  public static WPI_TalonSRX exampleRightTalon;
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
