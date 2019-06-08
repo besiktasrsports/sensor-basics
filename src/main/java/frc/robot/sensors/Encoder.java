@@ -7,10 +7,10 @@ import java.lang.Math;
 import frc.robot.Robot;
 
 public class Encoder {
-    public static double Left_Encoder_Position;
-    public static double Right_Encoder_Position;
-    public static double Perimeter = 48; // Wheel Perimeter
-    public static double RoundNumber = 0;
+    public static double leftEncoderPosition;
+    public static double rightEncoderPosition;
+    public static double perimeter = 48; // Wheel Perimeter
+    public static double roundNumber = 0;
     public static double velocity;
     public static double encoderValue;
     public static double encoderRound;
@@ -34,19 +34,19 @@ public class Encoder {
 
     }
     public static void printLeftEncoderPosition(){
-        Left_Encoder_Position = Robot.m_drivetrain.exampleLeftTalon.getSelectedSensorPosition();
+        leftEncoderPosition = Robot.m_drivetrain.exampleLeftTalon.getSelectedSensorPosition();
         
-        System.out.println("Left Encoder Position   : " + Left_Encoder_Position);
-        System.out.println("Left Round Number : " + Left_Encoder_Position/4100); // Calculating round number 
+        System.out.println("Left Encoder Position   : " + leftEncoderPosition);
+        System.out.println("Left Round Number : " + leftEncoderPosition/4100); // Calculating round number 
                                                                                  // 4100 comes from sensor's datasheet.
         
 
     }
     public static void printRightEncoderPosition() {
         
-        Right_Encoder_Position = Robot.m_drivetrain.exampleRightTalon.getSelectedSensorPosition();
-        System.out.println("Right Encoder Position   : " + Right_Encoder_Position);
-        System.out.println("Right Round Number : " + Right_Encoder_Position/4100);     
+        rightEncoderPosition = Robot.m_drivetrain.exampleRightTalon.getSelectedSensorPosition();
+        System.out.println("Right Encoder Position   : " + rightEncoderPosition);
+        System.out.println("Right Round Number : " + rightEncoderPosition/4100);     
     }
 
     public static double getEncoderPosition() {
