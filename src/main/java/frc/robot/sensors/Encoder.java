@@ -11,6 +11,7 @@ public class Encoder {
     public static double Right_Encoder_Position;
     public static double Perimeter = 48; // Wheel Perimeter
     public static double RoundNumber = 0;
+    public static double velocity;
     public static double encoderValue;
     public static double encoderRound;
     public static double encoderPosition;
@@ -32,7 +33,7 @@ public class Encoder {
          
 
     }
-    public static void Left_Encoder_Position(){
+    public static void printLeftEncoderPosition(){
         Left_Encoder_Position = Robot.m_drivetrain.exampleLeftTalon.getSelectedSensorPosition();
         
         System.out.println("Left Encoder Position   : " + Left_Encoder_Position);
@@ -41,7 +42,7 @@ public class Encoder {
         
 
     }
-    public static void Right_Encoder_Position() {
+    public static void printRightEncoderPosition() {
         
         Right_Encoder_Position = Robot.m_drivetrain.exampleRightTalon.getSelectedSensorPosition();
         System.out.println("Right Encoder Position   : " + Right_Encoder_Position);
@@ -60,5 +61,15 @@ public class Encoder {
         encoderRound = encoderValue/4100;
         encoderPosition = encoderRound*2*Math.PI*15.24;
         encoderZeroValue = encoderPosition;
+        
     }
+    
+    public static void printEncoderVelocity(){
+
+        velocity  = ( Robot.m_drivetrain.exampleLeftTalon.getSelectedSensorVelocity() + Robot.m_drivetrain.exampleRightTalon.getSelectedSensorVelocity() )/2;  
+        System.out.println("Velocity is : "+velocity);
+
+    }
+
+
 }

@@ -19,7 +19,12 @@ public class ExampleDriveTrain extends Subsystem {
   public static WPI_TalonSRX exampleRightTalon;
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
+public ExampleDriveTrain(){
 
+  exampleLeftTalon = new WPI_TalonSRX(14); //ID's are random.
+  exampleRightTalon = new WPI_TalonSRX(15);
+
+}
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
