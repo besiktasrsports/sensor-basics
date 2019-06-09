@@ -2,12 +2,14 @@ package frc.robot.sensors;
 
 import edu.wpi.first.wpilibj.Counter;
 import edu.wpi.first.wpilibj.DigitalInput;
+import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.Robot;
 
 
-public class LimitSwitch{
+public class LimitSwitch extends Subsystem{
 
-
+    // Subsystem olarak tanimlama sebebimiz periodic fonksiyonunu kullanmak
+    
     private DigitalInput limitSwitch;
     private Counter limitSwitchCounter;
     private int limitSwitchData;
@@ -19,6 +21,9 @@ public class LimitSwitch{
         limitSwitchCounter = new Counter(limitSwitch);
 }
 
+    public void initDefaultCommand(){
+
+    }
     public void periodic(){
 
         limitSwitchData = limitSwitchCounter.get();
@@ -33,6 +38,8 @@ public class LimitSwitch{
             switchFlag = false;
 
         }
+
+        System.out.println("Limit Switch Status : " +switchFlag);
 
     }
 
