@@ -3,7 +3,7 @@ Example codes for our Summer Workshop lesson, sensor basics.
 
 
 ### Slide Document
-- [Sneaky Snakes Sensors Slide](https://www.google.com)
+- [Sneaky Snakes Sensors Slide](https://drive.google.com/file/d/19jDLVm_NFYhKXbE7dnCdcbudGzLOo_Nr/view?usp=sharing)
 
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/sneakysnakesfrc/sensor-basics.svg)
