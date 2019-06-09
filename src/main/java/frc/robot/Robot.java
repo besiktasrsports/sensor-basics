@@ -35,7 +35,7 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     m_oi = new OI();
     m_drivetrain = new ExampleDriveTrain();
-   
+    
   }
 
   /**
@@ -107,6 +107,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     Scheduler.getInstance().run();
+    
   }
 
   /**
