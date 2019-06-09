@@ -32,3 +32,14 @@ public double getYawValue(){
 
 }
 
+public double pitchValue(){
+    pitch = ahrs.getPitch();
+    return pitch;
+}
+public double rollValue(){
+    roll = ahrs.getPitch();
+    return roll;
+}
+}
+
+
