@@ -14,6 +14,8 @@ import edu.wpi.first.wpilibj.SPI;
 public class navxGyro {
 public static AHRS ahrs;
 public static double yawValue;
+public static double pitchValue;
+public static double rollValue;
 
 
 public navxGyro(){
@@ -30,15 +32,13 @@ public double getYawValue(){
     }
 
 
+public double getPitchValue(){
+    pitchValue = ahrs.getPitch();
+    return pitchValue;
 }
-
-public double pitchValue(){
-    pitch = ahrs.getPitch();
-    return pitch;
-}
-public double rollValue(){
-    roll = ahrs.getPitch();
-    return roll;
+public double getRollValue(){
+    rollValue = ahrs.getPitch();
+    return rollValue;
 }
 }
 
