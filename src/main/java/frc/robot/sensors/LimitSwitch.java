@@ -9,7 +9,7 @@ import frc.robot.Robot;
 public class LimitSwitch extends Subsystem{
 
     // Subsystem olarak tanimlama sebebimiz periodic fonksiyonunu kullanmak
-    
+
     private DigitalInput limitSwitch;
     private Counter limitSwitchCounter;
     private int limitSwitchData;
@@ -19,7 +19,7 @@ public class LimitSwitch extends Subsystem{
 
         limitSwitch = new DigitalInput(1); // Limit Switch'i RoboRIO'nun DIO pinlerinden 1 numarali pine atiyoruz.
         limitSwitchCounter = new Counter(limitSwitch);
-}
+    }
 
     public void initDefaultCommand(){
 
