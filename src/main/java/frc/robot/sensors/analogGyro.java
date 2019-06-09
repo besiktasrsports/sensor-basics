@@ -14,14 +14,22 @@ import edu.wpi.first.wpilibj.interfaces.Gyro;
  * Add your docs here.
  */
 public class analogGyro {
+    
 public Gyro gyro;
 public double angle;
     
     public analogGyro(){
+
         gyro = new AnalogGyro(1);
+    
     }
     public double angleValue(){
+    
         angle = gyro.getAngle();
+    
         return angle;
     }
+
+
 }
+

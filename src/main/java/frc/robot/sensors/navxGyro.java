@@ -7,21 +7,28 @@
 
 package frc.robot.sensors;
 import com.kauailabs.navx.frc.AHRS;
+import edu.wpi.first.wpilibj.SPI;
 /**
  * Add your docs here.
  */
-public class navxGyroscopeExample {
+public class navxGyro {
 public static AHRS ahrs;
-public static double yaw;
+public static double yawValue;
 
 
-public navxGyroscopeExample(){
-       ahrs = new AHRS(SPI.Port.kMXP);
+public navxGyro(){
+      
+    ahrs = new AHRS(SPI.Port.kMXP);
+    
     }
 
-public double yawValue(){
-    yaw = ahrs.getYaw();
-    return yaw;
-}
+public double getYawValue(){
+
+    yawValue = ahrs.getYaw();
+    
+    return yawValue;
+    }
+
+
 }
 
