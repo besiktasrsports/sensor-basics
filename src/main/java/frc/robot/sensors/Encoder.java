@@ -9,7 +9,6 @@ import frc.robot.Robot;
 public class Encoder {
     public static double leftEncoderPosition;
     public static double rightEncoderPosition;
-    public static double perimeter = 48; // Wheel Perimeter
     public static double roundNumber = 0;
     public static double velocity;
     public static double encoderValue;
@@ -52,14 +51,14 @@ public class Encoder {
     public static double getEncoderPosition() {
         encoderValue = (Robot.m_drivetrain.exampleLeftTalon.getSelectedSensorPosition()+ Robot.m_drivetrain.exampleRightTalon.getSelectedSensorPosition())/2;
         encoderRound = encoderValue/4100;
-        encoderPosition = encoderRound*2*Math.PI*15.24; // Translating data to centimeters
+        encoderPosition = encoderRound*Math.PI*15.24; // Translating data to centimeters
         return encoderPosition-encoderZeroValue;
     }
 
     public static void zeroEncoder() {
         encoderValue = (Robot.m_drivetrain.exampleLeftTalon.getSelectedSensorPosition()+ Robot.m_drivetrain.exampleRightTalon.getSelectedSensorPosition())/2;
         encoderRound = encoderValue/4100;
-        encoderPosition = encoderRound*2*Math.PI*15.24;
+        encoderPosition = encoderRound*Math.PI*15.24;
         encoderZeroValue = encoderPosition;
         
     }
